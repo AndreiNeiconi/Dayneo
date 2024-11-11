@@ -1,0 +1,65 @@
+<div class="-product--details--info scroll">
+    <div class="product-detail-close">
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+    <div class="product-detail-image">
+        <img [src]="product.imageUrl" class="product-detail-image">
+    </div>
+
+    <div class="product-detail">
+        <div class="product-detail-name">
+            <h2>{{product.name}}</h2>
+        </div>
+        <div class="product-detail-gbc">
+            <span>{{product.size}}</span>
+            <span>{{product.categori}}</span>
+        </div>
+        <div class="product-detail-price" *ngIf="product.discauntPrice">
+            <p >
+                <b>If you will buy 2L you will save</b>
+                <span style="background-color: red; color:white"><s>${{product.price}}</s></span>
+                <span style="background-color: green; color:white">${{product.discauntPrice}}</span> (Inclusive of all taxes)
+            </p>
+        </div>
+        <div class="product-detail-size">
+            <div style="padding: 5px 0px;border-bottom: #ccc 2px solid">
+                <h4>Gramaje Disponibile</h4>
+            </div>
+            <diV style="margin-top: 20px" *ngFor="let prod of product.availableSize">
+                <span class="product-detail-available-size">{{prod}}</span>
+            </diV>
+        </div>
+
+
+        <div class="product-detail-desc">
+            <div style="padding: 5px 0px;border-bottom: #ccc 2px solid">
+                <h4>Descrietee de Produs</h4>
+            </div>
+            <div style="margin-top: 20px">
+                <table>
+                    <th>Valori nutritionale</th>
+                    <tr>
+                        <td>{{product.nutrientValue[0]}}</td>
+                        <td>{{product.nutrientValue[1]}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{product.nutrientValue[2]}}</td>
+                        <td>{{product.nutrientValue[3]}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{product.nutrientValue[4]}}</td>
+                        <td>{{product.nutrientValue[5]}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{product.nutrientValue[6]}}</td>
+                        <td>{{product.nutrientValue[7]}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="product-detail-addtoCart">
+        <button class="btn-add-to-cart">ADD TO CART</button>
+    </div>
+</div>
+<div class="overlay"></div>

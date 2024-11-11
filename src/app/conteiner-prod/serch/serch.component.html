@@ -1,0 +1,10 @@
+<div class="search-product">
+    <input class="search-product-input" [value]="serchText" #serchInput>
+    <button class="btn btn-search" (click)="updateSearchText()" >Cauta</button>
+</div>
+<div class="search-result-for" *ngIf="serchText != ''"><p><strong>Resultatele pentru:</strong>{{serchText}}</p></div>
+
+
+
+<!-- [(ngModel)]="serchText" (input)="onSearchTextChange()"
+ [class]="{'btn':true,'btn-search':serchText,'btn-search-disabled':!serchText}" [disabled]="!serchText" -->

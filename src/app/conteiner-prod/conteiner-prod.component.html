@@ -1,0 +1,5 @@
+<div class="product-conteiner">
+    <app-serch (searchTextChange)="setSerchText($event)"></app-serch>
+    <app-product-list [serchText]="serchText" #productlistComponeent></app-product-list>
+    <app-product-detalis *ngIf="productlistComponeent.selectedProdact" [productlistCom]="prductListComponent"></app-product-detalis>
+</div>

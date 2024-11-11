@@ -1,0 +1,51 @@
+.product-item{
+    width: 290px;
+    background-color: #FDfefe;
+    margin: 10px 10px;
+    padding:10px 10px 20px 10px;
+    border: #efefef 2px solid;
+}
+.product-item:hover{
+    -webkit-box-shadow:0 0 1px 3px #000 inset ;
+    -moz-box-shadow:0 0 1px 3px #000 inset;
+    border: #efefef 2px solid;
+    box-shadow: 10px 10px 18px #cccccc;
+}
+.whislist-sale-conteiner{
+    display: inline-block;
+    width: 270px;
+    position: absolute;
+    padding: 5px 0px;
+}
+.on-sale-tag{
+    float: right;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: -10px;
+    padding: 5px 10px;
+    background-color: #FFC000;
+    font-weight: bold;
+    box-shadow: 2px 2px 6px #ccc;
+}
+.add-to-price{
+    padding: 1px 5px;
+    position: absolute;
+    margin-top: -25px;
+    background-color: #28282b;
+    color: white;
+}
+.product-image{
+    width: 265px;
+    height: 250px;
+}
+.product-name{
+    font-size: 14px;
+    color:#28282b;
+    margin-top: 7px;
+}
+.product-category,.product-Type,.product-Size,.product-in-Stok{
+    font-size: 12px;
+    color: #999;
+    margin: 7px;
+}
+
