@@ -1,0 +1,14 @@
+
+.count-cart{
+    background-color: red;
+    width: min-content;
+    padding: 2px;
+    color: #ced4da;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: xx-small;
+    position: relative;
+}
+.cart-item-nav{
+    align-self: flex-end;
+}

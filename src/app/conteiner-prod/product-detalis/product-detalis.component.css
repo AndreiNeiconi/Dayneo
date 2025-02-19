@@ -9,6 +9,7 @@
     background-color: rgba(0,0,0,0.3); /* Black background with opacity */
     z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
+
 }
 
 .-product--details--info{
@@ -41,7 +42,7 @@
 }
 
 .product-detail-gbc > span{
-    background-color: #36454F;
+    /* background-color: #36454F; */
     margin-left: 0px;
     padding: 5px 20px;
     font-size: 14px;

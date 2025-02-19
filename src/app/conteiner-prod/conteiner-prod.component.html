@@ -1,5 +1,23 @@
 <div class="product-conteiner">
     <app-serch (searchTextChange)="setSerchText($event)"></app-serch>
     <app-product-list [serchText]="serchText" #productlistComponeent></app-product-list>
-    <app-product-detalis *ngIf="productlistComponeent.selectedProdact" [productlistCom]="prductListComponent"></app-product-detalis>
+    <app-product-detalis *ngIf="productlistComponeent.selectedProdact" [productlistCom]="prductListComponent" class="product-list-conteiner"></app-product-detalis>
+    <div class="featured-product">
+        <div class="featured-product-heading">
+            <h2>Incearca Noile noastere produse</h2>
+        </div>
+        <app-featured-product>
+            <h3 class="title" >Noul suc de coacaz negru </h3>
+            <button class="call-to-action" >Vezi mai mult</button>
+        </app-featured-product>
+        <app-featured-product>
+            <h3 class="title">Noul suc Mar cu zmeura </h3>
+            <button class="call-to-action" >Vezi mai mult</button>
+        </app-featured-product>
+        <app-featured-product>
+            <h3 class="title">Noul suc Mar cu ghimbir </h3>
+            <button class="call-to-action" >Vezi mai mult</button>
+        </app-featured-product>
+</div>
+    
 </div>

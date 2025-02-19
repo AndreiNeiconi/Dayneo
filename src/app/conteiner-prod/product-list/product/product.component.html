@@ -1,19 +1,23 @@
-<div class="product-item" >
+<div class="product-item" appHighlight >
     <div class="wishlist-sale-conteiner">
         <div class="add-to-wishlist">
             <i class="fa fa-heart-o" aria-hidden="true"></i>
         </div>
-        <div class="on-sale-tag" *ngIf="product.discauntPrice">{{(100-(product.discauntPrice/product.price*100)).toFixed(0)}}% Off</div>
+        <div class="on-sale-tag" *ngIf="prod.discauntPrice">{{(100-(prod.discauntPrice/prod.price*100)).toFixed(0)}}% Off</div>
         <div class="product-image">
-            <img [src]="product.imageUrl" alt="" class="product-image" width="300px">
+            <img [src]="prod.imageUrl" alt="" class="product-image" width="300px">
         </div>
-        <div class="add-to-price">Pret {{product.price}} Ron</div>
-        <div class="product-name">{{product.name}}</div>
-        <div class="product-category">Categoria: {{product.categori}}</div>
-        <div class="product-Type">Tip {{product.type}}</div>
-        <div class="product-Size">Gramaje disponibile {{product.size}}</div>
-        <div class="product-in-Stok" [ngStyle]="{fontWeight:'bold',color:product.is_in_inventory? 'green':'red'}">
-            {{product.is_in_inventory?"In stoc":"stoc epuizat"}} 
+        <div class="add-to-price">Pret {{prod.price}} Ron</div>
+        <div class="product-name">{{prod.name || 'suc de mere'}}</div>
+        <div class="product-category">Categoria: {{prod.categori}}</div>
+        <div class="product-Type">Tip {{prod.type}}</div>
+        <div class="product-Size">Gramaje disponibile {{prod.size}}</div>
+        <div class="product-in-Stok" [ngStyle]="{fontWeight:'bold',color:prod.is_in_inventory ==='true'? 'green':'red'}">
+            {{prod.is_in_inventory==='true'?"In stoc":"stoc epuizat"}} 
+        </div>
+        <div>
+            <button class="btn btn-primary" (click)="addToCart(prod)" routerLink="cart-page">Adauga in cos</button>
+            <button class="btn btn-secondary" >Cumpara acum</button>
         </div>
     </div>
 </div>

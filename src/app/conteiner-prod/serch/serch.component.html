@@ -1,8 +1,22 @@
-<div class="search-product">
+<!-- <div class="search-product">
     <input class="search-product-input" [value]="serchText" #serchInput>
     <button class="btn btn-search" (click)="updateSearchText()" >Cauta</button>
 </div>
 <div class="search-result-for" *ngIf="serchText != ''"><p><strong>Resultatele pentru:</strong>{{serchText}}</p></div>
+ -->
+
+
+
+ <div class="input-group ">
+    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" [value]="serchText" #serchInput />
+    <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init (click)="updateSearchText()">search</button>
+
+
+  </div>
+  <div class="search-result-for" *ngIf="serchText != ''"><p><strong>Resultatele pentru:</strong>{{serchText}}</p></div>
+
+
+
 
 
 

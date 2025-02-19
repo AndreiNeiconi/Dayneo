@@ -20,5 +20,6 @@ export class FilterComponent {
 
   onSelectedFilterRadioButtonChange(){
     this.selectedFilterRadioButtonChange.emit(this.selectedFilterRadioButton)
+    console.log(this.all,this.inStock,this.outOfStok)
   }
 } 

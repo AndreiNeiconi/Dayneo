@@ -11,8 +11,8 @@
             <h2>{{product.name}}</h2>
         </div>
         <div class="product-detail-gbc">
-            <span>{{product.size}}</span>
-            <span>{{product.categori}}</span>
+            <span >{{product.size}}</span>
+            <span >{{product.categori}}</span>
         </div>
         <div class="product-detail-price" *ngIf="product.discauntPrice">
             <p >
@@ -59,7 +59,10 @@
         </div>
     </div>
     <div class="product-detail-addtoCart">
-        <button class="btn-add-to-cart">ADD TO CART</button>
+        <button class="btn-add-to-cart" *ngIf="product.is_in_inventory;else outOfStok" appHover>ADAUGA IN COS</button>
+        <ng-template #outOfStok>
+            <button class="btn-add-to-cart" appHover>INDISPONIBIL</button>
+        </ng-template>
     </div>
 </div>
 <div class="overlay"></div>
